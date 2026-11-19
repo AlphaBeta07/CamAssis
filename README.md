@@ -20,6 +20,22 @@ CamAssis features a distinctive **retro pixel-art brutalist design system** insp
 
 ---
 
+## 📱 Application UI & Appearance
+
+Real application screenshots captured on a physical Android device showcasing the retro pixel brutalist UI, custom dotted-grid texture, and always-visible native status bar:
+
+| **Home Screen** | **Pose Library** |
+| :---: | :---: |
+| <img src="./app_ui_screenshot/img1.png" alt="CamAssis Home Screen" width="320" /> | <img src="./app_ui_screenshot/img2.png" alt="CamAssis Pose Library Screen" width="320" /> |
+| **Personalized Discovery**<br>Daily pose inspiration, quick category carousels, and one-tap *My Pose* guide creator | **Curated Pose Catalog**<br>Explore 10+ occasions, filter by Beginner/Intermediate/Advanced, and search by mood |
+
+| **My Photos & Local Saving** | **Profile & User Settings** |
+| :---: | :---: |
+| <img src="./app_ui_screenshot/img3.png" alt="CamAssis Direct Photo Saving Screen" width="320" /> | <img src="./app_ui_screenshot/img4.png" alt="CamAssis Profile & Settings Screen" width="320" /> |
+| **Direct Device Saving**<br>100% private, zero cloud photo uploads, and native gallery album integration | **System Status & Preferences**<br>Saved favorites count, AI sensor diagnostics, app settings, and account controls |
+
+---
+
 ## 🔒 Privacy-by-Design Guarantee
 
 1. **Zero Cloud Photo Upload**: Photographs captured using CamAssis are immediately saved directly to your native Gallery (Android) or Photos app (iOS) in a dedicated `"CamAssis"` album. No photo pixels are ever uploaded to cloud servers.
