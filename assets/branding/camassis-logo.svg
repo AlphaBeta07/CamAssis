@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="340" viewBox="32 40 400 340" role="img" aria-labelledby="title desc">
+  <title id="title">CamAssis logo</title>
+  <desc id="desc">A bold retro camera mark with a pixel-inspired lens and the CamAssis wordmark.</desc>
+  <defs>
+    <style>
+      .ink{fill:#30251D}
+      .yellow{fill:#F2C202}
+      .blue{fill:#0797CF}
+      .orange{fill:#F28C28}
+      .green{fill:#087A3B}
+      .word{font-family:'JetBrains Mono','Courier New',monospace;font-weight:800;letter-spacing:-5px}
+    </style>
+  </defs>
+  <!-- Pixel-camera mark -->
+  <g transform="translate(42 42)" shape-rendering="crispEdges">
+    <!-- offset shadow -->
+    <path d="M52 94h58V70h58V46h116v24h58v24h34v180h-34v34H52v-34H18V94h34z" fill="#30251D" transform="translate(12 12)"/>
+    <!-- camera body -->
+    <path d="M52 94h58V70h58V46h116v24h58v24h34v180h-34v34H52v-34H18V94h34z" class="yellow" stroke="#30251D" stroke-width="12" stroke-linejoin="miter"/>
+    <!-- top viewfinder -->
+    <path d="M128 46V20h116v26" class="blue" stroke="#30251D" stroke-width="12" stroke-linejoin="miter"/>
+    <!-- lens outer -->
+    <rect x="116" y="112" width="156" height="126" class="ink"/>
+    <rect x="130" y="126" width="128" height="98" class="blue"/>
+    <rect x="150" y="142" width="88" height="66" class="yellow"/>
+    <rect x="170" y="158" width="48" height="34" class="ink"/>
+    <rect x="184" y="168" width="20" height="14" class="blue"/>
+    <!-- flash -->
+    <path d="M300 100h28v28h-28z" class="orange" stroke="#30251D" stroke-width="8"/>
+    <!-- pixel focus marks -->
+    <path d="M0 116V84h32M316 284h32v-32M0 252v32h32M316 84h32v32" fill="none" stroke="#087A3B" stroke-width="12"/>
+    <!-- shutter button -->
+    <rect x="280" y="48" width="28" height="18" class="orange" stroke="#30251D" stroke-width="7"/>
+  </g>
+  <!-- Wordmark -->
+  <!-- <g transform="translate(440 0)">
+    <text x="0" y="205" class="word ink" font-size="112">Cam<tspan class="green">Assis</tspan></text>
+    <rect x="4" y="238" width="590" height="10" class="orange"/>
+    <text x="8" y="292" font-family="'JetBrains Mono','Courier New',monospace" font-size="25" font-weight="700" letter-spacing="5" fill="#30251D">POSE IT. CAPTURE IT.</text>
+  </g> -->
+</svg>

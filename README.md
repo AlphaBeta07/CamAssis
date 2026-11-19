@@ -1,56 +1,90 @@
-# Welcome to your Expo app 👋
+<p align="center">
+  <img src="./assets/branding/camassis-logo.svg" alt="CamAssis Logo" width="220" />
+</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# CamAssis — AI-Powered Camera & Pose Assistant
 
-## Get started
+> **Your Personal AI Photography Director**  
+> *Discover aesthetic poses, align with transparent ghost guides, receive real-time on-device AI posture coaching, and save directly to your native device gallery.*
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🌟 Visual Identity & Design System
 
-2. Start the app
+CamAssis features a distinctive **retro pixel-art brutalist design system** inspired by modern technical portfolios (such as Life at FlytBase):
+- **Warm Cream Canvas**: `#E8E3CF` base background with subtle muted dotted grids.
+- **Vibrant Color Blocks**: `#F2C202` (Pixel Yellow), `#F28C28` (Pixel Orange), `#0797CF` (Pixel Blue), and `#087A3B` (Pixel Green).
+- **Brutalist Elements**: 2px thick ink borders (`#30251D`), hard offset box-shadows, zero soft blur.
+- **Typography**: Short pixel display headers (*Press Start 2P*) paired with legible monospace body (*JetBrains Mono*).
+- **Native Status Bar**: Always visible throughout every screen (including live camera view) with dark icons and warm cream background.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🔒 Privacy-by-Design Guarantee
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. **Zero Cloud Photo Upload**: Photographs captured using CamAssis are immediately saved directly to your native Gallery (Android) or Photos app (iOS) in a dedicated `"CamAssis"` album. No photo pixels are ever uploaded to cloud servers.
+2. **On-Device AI Inference**: Body landmark detection, coordinate normalization, and posture similarity run locally on your device. Camera frames are never transmitted over the network.
+3. **Pristine Image Output**: The transparent pose overlay and skeleton guides are strictly on-screen preview tools; your captured photographs are pristine native camera sensor captures.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Key Features
 
-When you're ready, run:
+- **Ghost Pose Camera**: Semi-transparent reference overlay with adjustable opacity (10% - 90%), three view modes (Original Photo, Pose Outline, or Both), 3x3 framing grid, and zoom controls.
+- **On-Device AI Pose Coach**: 33-point MediaPipe landmark tracking calculating joint angles across elbows, shoulders, hips, and knees with real-time directional feedback.
+- **Curated Pose Library**: Filter poses by Beach, Selfies, Couples, Travel, Sitting, Standing, Candid, and Fashion.
+- **My Pose Creator**: Import any image from your camera roll; CamAssis crops, corrects orientation, and extracts a custom transparent pose guide.
+- **Hardware-Encrypted Auth**: Session tokens stored securely in iOS Keychain / Android Keystore via `expo-secure-store`.
+- **App Store Compliant Account Deletion**: One-click complete account and metadata deletion via Supabase RPC.
 
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Expo SDK 58 / React Native 0.88 (TypeScript ~6.0)
+- **Routing**: Expo Router (file-system-based routing)
+- **State**: Zustand (Local store) & TanStack Query (Server state)
+- **Security**: Expo SecureStore (encrypted keychain/keystore)
+- **Media**: Expo Camera (`CameraView`), Expo MediaLibrary, Expo ImagePicker
+- **Icons**: Lucide React Native
+
+---
+
+## 📋 Quick Start
+
+### 1. Install Dependencies
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+### 2. Environment Configuration
+Copy `.env.example` to `.env`:
+```bash
+cp .env.example .env
+```
+*(If left empty, CamAssis runs in full offline mock mode with bundled categories, collections, and poses).*
 
-### Other setup steps
+### 3. Run Quality Gates
+```bash
+npm test            # Run automated unit tests (AI normalization, similarity math, data integrity)
+npx tsc --noEmit    # TypeScript typechecking (0 errors)
+npx expo lint       # ESLint verification (0 warnings, 0 errors)
+npx expo-doctor     # Expo dependency and config audit (20/20 checks passed)
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### 4. Start Development Server
+```bash
+npx expo start
+```
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📚 Documentation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — System architecture, subsystems, AI pipeline, and viewport layout.
+- [docs/SETUP.md](docs/SETUP.md) — Step-by-step local development & Supabase setup guide.
+- [docs/SECURITY.md](docs/SECURITY.md) — Security policies, RLS matrix, and account deletion workflow.
+- [docs/RELEASE.md](docs/RELEASE.md) — Build profiles, EAS configuration, and store submission checklists.
+- [docs/TESTING.md](docs/TESTING.md) — Testing strategy and device QA verification protocols.
+- [docs/STORE_METADATA.md](docs/STORE_METADATA.md) — Ready-to-use Google Play & Apple App Store listing text.
+- [docs/LEGAL.md](docs/LEGAL.md) — Production Privacy Policy & Terms of Service.
